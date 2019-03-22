@@ -1,0 +1,40 @@
+<header>
+
+<div class="bubble">
+  I wanna be the very best like no one ever was To catch them is my real test
+<strong>To train them is my cause.</strong>
+</div>
+
+	<br>
+	<div class="bubble bubble--highlight">
+<%= link_to 'Add a Pokemon', new_pokemon_path %>
+</div>
+	
+		</div>
+</header>
+
+<div>
+<table>
+    <tr>
+        <th>Pokemon Name</th>
+        <th>Type</th>
+        <th>Japanese Name</th>
+        <th>Button</th>
+        <th>Button</th>
+    </tr>
+        <% @pokemon.each do |pokemon| %>
+        <tr>
+            <td><%= pokemon.name %></td> 
+            <td><%= pokemon.typez %></td>
+            <td><%= pokemon.jpname %></td>
+        <td><%= link_to 'Delete', pokemon_path(pokemon), method: :delete %></td>
+         <td><%= link_to 'Update', edit_pokemon_path(pokemon) %></td>
+         <td><%= link_to 'Show', pokemon_path(pokemon) %></td>
+         <td><%= link_to 'Sightings', new_sighting_path(pokemon) %></td>
+         
+
+        </tr>
+<%end %>
+</table>
+
+</div>

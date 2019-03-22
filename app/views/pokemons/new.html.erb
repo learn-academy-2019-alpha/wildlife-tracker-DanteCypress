@@ -1,0 +1,23 @@
+
+<%= form_for @pokemon, url: {action: :create} do |f| %>
+
+<%= f.label :Pokemon_Name %>
+<%= f.text_field :name %> </br>
+
+<%= f.label :JP_Name %>
+<%= f.text_field :jpname %> </br>
+
+ <%= f.radio_button :typez, 'Water', :checked => true %>
+ <%= label :typez, 'Water' %>
+ 
+ <%= f.radio_button :typez, 'Fire' %>
+ <%= label :typez, 'Fire' %>
+ 
+ <%= f.radio_button :typez, 'Electric'%>
+ <%= label :typez, 'Electric' %>
+ 
+ <%= f.radio_button :typez, 'Normal' %>
+ <%= label :typez, 'Normal' %> </br>
+
+<%= f.submit 'Create' %>
+<% end %>
